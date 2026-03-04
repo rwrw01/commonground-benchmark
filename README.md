@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Common Ground - Portfolio Selector
 
-## Getting Started
+Webapplicatie waarmee gemeenten hun Common Ground initiatieven kunnen selecteren, beheren en exporteren. Gebouwd als benchmark-tool op basis van het [Common Ground Portfolio](https://commonground.nl).
 
-First, run the development server:
+## Functionaliteiten
+
+- **61 initiatieven** uit het Common Ground portfolio, ingedeeld in 9 categorieën
+- **Profielbeheer** — maak meerdere profielen aan (bijv. per gemeente), schakel ertussen, hernoem of verwijder ze
+- **Aan/uit toggles** — klik op een initiatief om het te selecteren of deselecteren
+- **Categoriefilter** — filter de weergave op categorie (Zaaksystemen, Portalen, Registers, etc.)
+- **JSON export** — download je selectie als `.json` bestand
+- **JSON import** — laad een eerder opgeslagen selectie in
+- **Persistentie** — selecties blijven bewaard in de browser (localStorage)
+
+## Categorieën
+
+| Categorie | Voorbeelden |
+|---|---|
+| Zaaksystemen | Open Zaak, GZAC, Zakenregister |
+| Portalen & MijnOmgeving | Open Inwoner Platform, NLPortal |
+| Registers & Data | OpenCatalogi, Open Registers, vrijBRP |
+| Documenten & Archief | Xential, Open Archiefbeheer |
+| Notificaties & Communicatie | Signalen, NotifyNL en OMC |
+| Formulieren & Klantinteractie | Open Formulieren, Open Klant, KISS |
+| Geo & Visualisatie | MapGallery, OpenStad |
+| AI & Innovatie | SafeGPT, Digitale Medewerker |
+| Overig | Rx.Open, MyFMS, ASE Cloud Services |
+
+## Technologie
+
+- [Next.js 16](https://nextjs.org/) (App Router)
+- TypeScript
+- Tailwind CSS
+- Vercel deployment
+
+## Lokaal draaien
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in je browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+De app is gekoppeld aan Vercel. Elke push naar `main` triggert automatisch een nieuwe deployment.
