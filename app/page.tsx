@@ -133,10 +133,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-linear-to-r from-amber-500 to-amber-600 text-white py-6 px-4 shadow-lg">
+      <header className="bg-mxi-purple text-white py-6 px-4 shadow-lg">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-2xl font-bold">Common Ground - Portfolio Selector</h1>
-          <p className="text-amber-100 text-sm mt-1">
+          <p className="text-purple-200 text-sm mt-1">
             Selecteer de initiatieven die relevant zijn voor uw gemeente en exporteer als JSON
           </p>
         </div>
@@ -170,7 +170,7 @@ export default function Home() {
                   onClick={() => setCategoryFilter(null)}
                   className={`block w-full text-left px-3 py-1.5 rounded text-sm transition-colors ${
                     categoryFilter === null
-                      ? "bg-blue-50 text-blue-700 font-medium"
+                      ? "bg-mxi-blue-light text-mxi-purple font-medium"
                       : "text-gray-600 hover:bg-gray-50"
                   }`}
                 >
@@ -182,7 +182,7 @@ export default function Home() {
                     onClick={() => setCategoryFilter(cat === categoryFilter ? null : cat)}
                     className={`block w-full text-left px-3 py-1.5 rounded text-sm transition-colors ${
                       categoryFilter === cat
-                        ? "bg-blue-50 text-blue-700 font-medium"
+                        ? "bg-mxi-blue-light text-mxi-purple font-medium"
                         : "text-gray-600 hover:bg-gray-50"
                     }`}
                   >

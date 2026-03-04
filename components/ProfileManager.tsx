@@ -53,7 +53,7 @@ export default function ProfileManager({
         <h2 className="font-semibold text-gray-800">Profielen</h2>
         <button
           onClick={() => setIsCreating(!isCreating)}
-          className="text-sm px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+          className="text-sm px-3 py-1 bg-mxi-purple text-white rounded hover:bg-mxi-purple-dark transition-colors"
         >
           + Nieuw profiel
         </button>
@@ -67,12 +67,12 @@ export default function ProfileManager({
             onChange={(e) => setNewName(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleCreate()}
             placeholder="Naam (bijv. Gemeente Alkmaar)"
-            className="flex-1 px-3 py-1.5 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 px-3 py-1.5 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-mxi-purple"
             autoFocus
           />
           <button
             onClick={handleCreate}
-            className="px-3 py-1.5 bg-emerald-600 text-white rounded text-sm hover:bg-emerald-700"
+            className="px-3 py-1.5 bg-mxi-purple text-white rounded text-sm hover:bg-mxi-purple-dark"
           >
             Opslaan
           </button>
@@ -94,7 +94,7 @@ export default function ProfileManager({
               key={profile.id}
               className={`flex items-center gap-2 px-3 py-2 rounded cursor-pointer transition-colors ${
                 activeProfileId === profile.id
-                  ? "bg-blue-50 border border-blue-200"
+                  ? "bg-mxi-blue-light border border-mxi-purple/30"
                   : "hover:bg-gray-50 border border-transparent"
               }`}
             >
@@ -108,12 +108,12 @@ export default function ProfileManager({
                       if (e.key === "Enter") handleRename(profile.id);
                       if (e.key === "Escape") setEditingId(null);
                     }}
-                    className="flex-1 px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="flex-1 px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-mxi-purple"
                     autoFocus
                   />
                   <button
                     onClick={() => handleRename(profile.id)}
-                    className="text-xs px-2 py-1 bg-emerald-600 text-white rounded"
+                    className="text-xs px-2 py-1 bg-mxi-purple text-white rounded"
                   >
                     OK
                   </button>
@@ -121,7 +121,7 @@ export default function ProfileManager({
               ) : (
                 <>
                   <div className="flex-1" onClick={() => onSelectProfile(profile.id)}>
-                    <div className="font-medium text-sm">{profile.name}</div>
+                    <div className="font-medium text-sm text-black">{profile.name}</div>
                     <div className="text-xs text-gray-500">
                       {profile.selectedIds.length} geselecteerd
                     </div>
@@ -131,7 +131,7 @@ export default function ProfileManager({
                       setEditingId(profile.id);
                       setEditName(profile.name);
                     }}
-                    className="text-gray-400 hover:text-blue-600 text-xs"
+                    className="text-gray-400 hover:text-mxi-purple text-xs"
                     title="Hernoemen"
                   >
                     ✏️

@@ -64,7 +64,7 @@ export default function ExportPanel({
       <div className="flex items-center justify-between mb-3">
         <h2 className="font-semibold text-gray-800">Acties</h2>
         <div className="text-sm text-gray-600">
-          <span className="font-bold text-emerald-600">{selectedCount}</span>
+          <span className="font-bold text-mxi-purple">{selectedCount}</span>
           <span> / {totalCount} geselecteerd</span>
         </div>
       </div>
@@ -87,11 +87,11 @@ export default function ExportPanel({
         <button
           onClick={handleExport}
           disabled={!activeProfile}
-          className="px-3 py-1.5 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="px-3 py-1.5 text-sm bg-mxi-purple text-white rounded hover:bg-mxi-purple-dark disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           JSON Exporteren
         </button>
-        <label className="px-3 py-1.5 text-sm bg-amber-600 text-white rounded hover:bg-amber-700 cursor-pointer transition-colors">
+        <label className="px-3 py-1.5 text-sm bg-mxi-blue text-white rounded hover:bg-mxi-blue/80 cursor-pointer transition-colors">
           JSON Importeren
           <input
             ref={fileInputRef}

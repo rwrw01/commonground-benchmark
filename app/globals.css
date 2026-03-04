@@ -3,20 +3,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --mxi-purple: #883486;
+  --mxi-purple-light: #a44da2;
+  --mxi-purple-dark: #6b2869;
+  --mxi-blue: #4ea7f9;
+  --mxi-blue-light: #e8f4fe;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-mxi-purple: var(--mxi-purple);
+  --color-mxi-purple-light: var(--mxi-purple-light);
+  --color-mxi-purple-dark: var(--mxi-purple-dark);
+  --color-mxi-blue: var(--mxi-blue);
+  --color-mxi-blue-light: var(--mxi-blue-light);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {

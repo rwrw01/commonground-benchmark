@@ -17,7 +17,7 @@ export default function InitiativeCard({ initiative, selected, onToggle }: Props
         text-sm leading-tight min-h-[60px] flex items-center
         ${
           selected
-            ? "border-emerald-500 bg-emerald-50 text-emerald-900 shadow-md ring-1 ring-emerald-300"
+            ? "border-mxi-purple bg-mxi-blue-light text-mxi-purple-dark shadow-md ring-1 ring-mxi-purple/30"
             : "border-gray-200 bg-white text-gray-700 hover:border-gray-400 hover:shadow-sm"
         }
       `}
@@ -25,7 +25,7 @@ export default function InitiativeCard({ initiative, selected, onToggle }: Props
       <div className="flex items-center gap-2 w-full">
         <div
           className={`w-4 h-4 rounded flex-shrink-0 flex items-center justify-center text-xs
-            ${selected ? "bg-emerald-500 text-white" : "bg-gray-200 text-transparent"}
+            ${selected ? "bg-mxi-purple text-white" : "bg-gray-200 text-transparent"}
           `}
         >
           ✓
